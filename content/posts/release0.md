@@ -18,5 +18,14 @@ The Department for Work and Pensions (DWP) is responsible for welfare, pensions 
 
 ### My Team
 
-I work within the HackIT team who are a DevOps team that build and support the infrastructure for products and projects on the Universal Credit platform. We work closely with the feature teams in Leeds and Manchester and aspire to work in a way that increases the flow of value from a Developer writing code through to the end user. 
+I work within the HackIT team who are a DevOps team that build and support the infrastructure for products and projects on the Universal Credit platform. We work closely with the feature teams in Leeds and Manchester and aspire to work in a way that increases the flow of value from a Developer writing code through to the end user.
+The team is comprised of a Tech Lead, a Delivery Manager , an Architect, two senior DevOps Engineers, a Junior DevOps Engineer, three contractors and then myself and another Apprentice DevOps Engineer. As we apprentices have joined the team they have moved to using Scrum to manage their work cycles. Scrum is an agile methodology where work is executed in short and periodic sprints, in this case two weeks. A planning meeting takes place at the beginning of the cycle where everyone agrees which tickets will be taken into the sprint and reach a consensus on the complexity of each task. Daily scrum meetings take place to update on work that has taken place and any blockers and then a retro is held at the end of the sprint. 
+
+At the moment we work on a hybrid basis which means we spend two days per week in the office and the rest of the time working from home. The team has many communication channels when not in the office, using Slack primarily but also Microsoft Teams. We use a product called Mural for online, shared whiteboarding and presenting. Throughout the working week there are 'Show and Tell' meetings for the Infrastructure teams to demo work they have done as well as a weekly 'Town Hall' meeting for general coms from the business. The team has also created a comprehensive wiki which contains information for the wider business about the team hierarchy, what products we support, our 'Roadmap' and wider goals. This wiki also contains information for onboarding and documentation such as Runbooks and How to's. Within this I have opportunity to engage in self led learning, with licences to Pluralsight and Cloud Guru being provided by the business, and complete Apprenticeship work as well as working on tickets from the shared Kanban board with support from my Line Manager and other members of the team.
+
+![Team Hack team charter](resources/images/ "Team Hack team charter")
+
+### Legislation and Compliance
+
+
 
