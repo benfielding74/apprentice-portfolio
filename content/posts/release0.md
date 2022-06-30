@@ -27,5 +27,5 @@ At the moment we work on a hybrid basis which means we spend two days per week i
 
 ### Legislation and Compliance
 
-
+I have completed DSE (Display Screen Equipment) guidance on starting which outlines how to correctly set up my working environment in the office and at my home desk. This training covered positioning desk, seating, screen and keyboard. Health and Safety training also covered identifying hazards in the workplace. In addition to this training had to be completed in Security and Data Protection at DWP and Public Sector Equality Duty. 
 
