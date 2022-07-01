@@ -23,7 +23,7 @@ The team is comprised of a Tech Lead, a Delivery Manager , an Architect, two sen
 
 At the moment we work on a hybrid basis which means we spend two days per week in the office and the rest of the time working from home. The team has many communication channels when not in the office, using Slack primarily but also Microsoft Teams. We use a product called Mural for online, shared whiteboarding and presenting. Throughout the working week there are 'Show and Tell' meetings for the Infrastructure teams to demo work they have done as well as a weekly 'Town Hall' meeting for general coms from the business. The team has also created a comprehensive wiki which contains information for the wider business about the team hierarchy, what products we support, our 'Roadmap' and wider goals. This wiki also contains information for onboarding and documentation such as Runbooks and How to's. Within this I have opportunity to engage in self led learning, with licences to Pluralsight and Cloud Guru being provided by the business, and complete Apprenticeship work as well as working on tickets from the shared Kanban board with support from my Line Manager and other members of the team.
 
-![Team Hack team charter](/charter.png "Team Hack team charter")
+![Team Hack team charter](charter.png)
 
 ### Legislation and Compliance
 
