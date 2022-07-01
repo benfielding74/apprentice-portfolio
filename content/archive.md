@@ -1,6 +1,7 @@
 ---
-title: "Contents"
-layout: "archives"
-url: "/archives/"
-summary: archives
+title: "Archive"
+layout: archive
+hidden: true
+url: "/archive/"
+summary: This page contains an archive of all posts
 ---
