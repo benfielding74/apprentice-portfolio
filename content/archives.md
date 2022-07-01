@@ -1,6 +1,6 @@
 ---
 title: "Archive"
-layout: archive
+layout: archives
 hidden: true
 url: "/archive/"
 summary: This page contains an archive of all posts
