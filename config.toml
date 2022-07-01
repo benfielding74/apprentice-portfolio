@@ -8,3 +8,4 @@ theme = "PaperMod"
         Text = "Suggest Changes" # edit text
         appendFilePath = true # to append file path to Edit link
         
+custom_css = ["css/custom.css"]
