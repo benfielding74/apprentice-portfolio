@@ -8,4 +8,13 @@ theme = "PaperMod"
         Text = "Suggest Changes" # edit text
         appendFilePath = true # to append file path to Edit link
         
-custom_css = ["css/custom.css"]
+[menu]
+
+[[menu.main]]
+
+  identifier = 'contents'
+  name = 'contents'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/contents/'
+  weight = -110
+

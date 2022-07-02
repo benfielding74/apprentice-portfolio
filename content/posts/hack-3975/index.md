@@ -1,12 +1,12 @@
 ---
 title: "hack-3975"
-date: 2022-06-29T12:05:16+01:00
+date: 2022-06-30T12:05:16+01:00
 draft: true
 ---
 
 #### Situation:
 
-A request for a feature was added to team Knaban board. In a legacy project the Devs received a notification to a Slack channel whenever a file is added
+A request for a feature was added to team Kanban board. In a legacy project the Devs received a notification to a Slack channel whenever a file is added
 or deleted from their S3 buckets. They were requesting that this functionality be added to the current project.
 
 > As a developer I would like to receive a notification into the #uc-far-prod-alerts Slack channel whenever an object is added to or deleted from the new
