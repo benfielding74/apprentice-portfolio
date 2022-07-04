@@ -1,7 +1,7 @@
 ---
 title: "hack-3975"
 date: 2022-06-30T12:05:16+01:00
-draft: true
+draft: false
 ---
 
 #### Situation:
@@ -131,5 +131,13 @@ module "lambda-slack-function" {
 
 With everything tested and merged I completed the ticket and moved into 'Done'.
 
+The work I had done received good feedback from the team that had generated the feature request, as evidenced below-
 
+![snippet of slack conversation](feedback.png)
+
+I feel this was a really good first ticket as it taught me how the Terraform projects in my team are structured. It taught me about how large IaC projects with Terraform can be broken down into modules for each part of the project. It taught me about how AWS SNS service works to listen for events and trigger Lambda's that can be used to send notifications and it taught me a lot about the version control process and conventions within my team, documenting my process and gave me an opportunity to get to know and work with other members of the team. I also had an opportunity to see how a new feature or product moves through stages from Sandbox to production. One really valuable lesson I will take from this ticket is to pull from the main branch of the project repo every day and rebase your branch code. Working on a branch of a major project means lots of other people are working and making changes which can affect how your feature code works if you don't keep up with those changes.
+
+I feel I still need to do some more research into how VPC's work and what the network modules do within the projects Terraform stacks as I did not really need to touch these as part of the project. I am following a Terraform path on Pluralsight to help fill in my knowledge gaps in this respect.
+
+I don't feel I would do anything especially differently as I was guided through this well by my line manager and team members.
 
