@@ -4,7 +4,7 @@ title = "Ben Fielding - Apprenticeship Portfolio"
 theme = "PaperMod"
 
 [Params.editPost] 
-        URL = "https://benfielding74.github.io/content"
+        URL = "https://github.com/benfielding74/apprentice-portfolio/tree/main/content"
         Text = "Suggest Changes" # edit text
         appendFilePath = true # to append file path to Edit link
         
