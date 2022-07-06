@@ -64,11 +64,12 @@ On a teams call, sharing desktops, we went through my Terraform and my colleague
 My colleague explained how this should work and I have diagrammed it below.
 
 ![Diagram of sns topic listening for s3 events](sns.jpg)
+*My diagram of how an SNS topic works, listening for events on a target then triggering a Lambda function*
 
 With these changes in place we could see that proof of concept worked and the Lambda was being triggered but the Cloudwatch logs showed that it was not sending the Slack notification.
 We worked through the Terraform stack and my colleague identified that the VPC created in the Sandbox environment would not allow the Lambda to communicate out to Slack.
 This led me to talk to one of the network architects on the team who advised that all we needed to do to test was to remove the elements of the original project that set up VPC rules for the Lambda. I did this and managed to generate a slack notification.
-With all of this in place within the sanbox environment I raised a request to merge my code into the main example application repository.
+With all of this in place within the sanbox environment I raised a request to merge my code into the main example application repository. [^1]
 
 My line manager picked up the merge request and identified some further actions:
 
@@ -77,12 +78,12 @@ My line manager picked up the merge request and identified some further actions:
 * I needed to update the .gitignore file so it would not upload the zipped Lambda file to the GitLab repository
 
 Once I had corrected these my branch was merged and I could start to integrate my infrastructure into the actual project.
-* I created a new branch within the project repo following the team naming conventions.
+* I created a new branch within the project repo following the team naming conventions. [^2]
 * I lifted and shifted my Terraform code across to the new branch
 
 I then ran Terraform plan which generated naming errors and duplicated resource block errors which I went through and debugged. On running Terraform plan again it generated errors which told me that my Terrafile contained out of date versions. I rebased my code against the main branch and running the plan again, it generated a plan without any errors.
 My next step was to speak to a colleague working with this specific project to identify which S3 buckets would need to trigger the notifications and to ensure that I would not cause any problems running and testing my deployment in the sandbox environment.
-The testing worked in the sandbox environment and I again submitted a merge request to integrate my test branch into the main project. At that time I had hard coded the Slack webhooks for the staging and production environments into the Lambda code and it was suggested that I add environment variables instead. I added the webhooks to the locals.tf file:
+The testing worked in the sandbox environment and I again submitted a merge request to integrate my test branch into the main project. At that time I had hard coded the Slack webhooks for the staging and production environments into the Lambda code and it was suggested that I add environment variables instead. I added the webhooks to the locals.tf file: [^3]
 ```
 locals {
   channel_name = {
@@ -131,13 +132,18 @@ module "lambda-slack-function" {
 
 With everything tested and merged I completed the ticket and moved into 'Done'.
 
-The work I had done received good feedback from the team that had generated the feature request, as evidenced below-
+The work I had done received good feedback from the team that had generated the feature request, as evidenced below and I know that the work I did would help the Dev team to monitor their applications and any changes.
 
 ![snippet of slack conversation](feedback.png)
+*Some feedback received from the team requesting the feature*
 
-I feel this was a really good first ticket as it taught me how the Terraform projects in my team are structured. It taught me about how large IaC projects with Terraform can be broken down into modules for each part of the project. It taught me about how AWS SNS service works to listen for events and trigger Lambda's that can be used to send notifications and it taught me a lot about the version control process and conventions within my team, documenting my process and gave me an opportunity to get to know and work with other members of the team. I also had an opportunity to see how a new feature or product moves through stages from Sandbox to production. One really valuable lesson I will take from this ticket is to pull from the main branch of the project repo every day and rebase your branch code. Working on a branch of a major project means lots of other people are working and making changes which can affect how your feature code works if you don't keep up with those changes.
+I feel this was a really good first ticket as it taught me how the Terraform projects in my team are structured. It taught me about how large IaC projects with Terraform can be broken down into modules for each part of the project. It taught me about how AWS SNS service works to listen for events and trigger Lambda's that can be used to send notifications and it taught me a lot about the version control process and conventions within my team, documenting my process and gave me an opportunity to get to know and work with other members of the team. [^4] I also had an opportunity to see how a new feature or product moves through stages from Sandbox to production. One really valuable lesson I will take from this ticket is to pull from the main branch of the project repo every day and rebase your branch code. Working on a branch of a major project means lots of other people are working and making changes which can affect how your feature code works if you don't keep up with those changes.
 
 I feel I still need to do some more research into how VPC's work and what the network modules do within the projects Terraform stacks as I did not really need to touch these as part of the project. I am following a Terraform path on Pluralsight to help fill in my knowledge gaps in this respect.
 
 I don't feel I would do anything especially differently as I was guided through this well by my line manager and team members.
 
+[^1]: [K1](posts/work-mapping-table)
+[^2]: [K2](posts/work-mapping-table)
+[^3]: [S18](posts/work-mapping-table)
+[^4]: [K18](posts/work-mapping-table)
