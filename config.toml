@@ -18,3 +18,5 @@ theme = "PaperMod"
   url = '/contents/'
   weight = -110
 
+[markup.goldmark.renderer]
+  unsafe = true
