@@ -10,8 +10,6 @@ draft: true
 
 * Looked at Go docs and then UCCLI cli. Familiarized myself with the codebase and then decided to pick off an easy first issue. The issue required a link to the release page to be provided when the upgrade command is run. This was found in the update.go file and only required a `fmt.Printf` statement. Submitted merge request and talked through the CI/CD pipeline for the project with product owner.
 
-* Prepare and deliver a presentation to non technical audience about DevOps and the infrastructure that Team Hack provision
-
 * Peer reviewed HACK-3095 for Barrington. Remove transit_subnet_route_legacy_common_stage once team have migrated from BB Macs
 
 ```
