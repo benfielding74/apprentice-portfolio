@@ -14,22 +14,28 @@ Our task was to prepare a presentation to be delivered to a non technical audien
 
 ### Actions
 
-Planning
-Writing our 'script'
+Planning -
+We held a meeting and used Mural as a virtual whiteboard to brainstorm our ideas for the presentation
+Writing our 'script' -
+We put together a rough powerpoint with some headings of topics we wanted to cover from our whiteboard session and researched 3 topics each before writing up some delivery notes. We gave this outline then to our line managers to review and give feedback before fleshing it out again. I built up the slides with images and titles and my colleague suggested that it would be a good idea to present each technology in the context of a user story that we could then use to present our solution in the form of a devops tool that we use. We each wrote a user story for the slides we had researched and worked on the slide layout and styling to make the whole presentation coherent.
 Delivering the presentation to Delivery Manager and Architect
 Rewrites and revisions following feedback from above
 
 ### Result
 
+We delivered the presentation below to a broadly non technical audience of portfolio managers over a Teams call.
+
 ![slide1](Slide1.jpeg)
 *fig 1: Slide 1 of the powerpoint*
+
 Transcript:
 BEN FIELDING: we're Barrington and Ben with Dev OPS, engineer apprentice apprentices and we started with DWP engineering in May. We work with the Hacket and whip it team who are a dev OPS team that build and support infrastructure for products and projects on the Burbank and UC platforms. So what we're gonna do is give you a a kind of simple overview of UM, infrastructure servers, networking and limitations of on premises. We're gonna talk to you a little bit about the DevOps culture, which we're going to link to some user stories which will hopefully highlight some of the services, products and tools that we commonly used to provide a platform for the developers to deploy to. So hopefully by the end of this you should kind of have an idea of how a web application works and how we facilitate the journey from developer to the end user, as well as some of the terms, technologies and concepts that we use to do that. So firstly, I'll I'll hand you over to Barrington to talk a little bit about infrastructure.
 
 ![slide2](Slide2.jpeg)
 *fig 2: Slide 2 of the powerpoint*
+
 Transcript:
-BARRINGTON BROOK: Thanks, Ben. The first thing to point out is that, uh, DevOps practices, UM and culture is relatively new. So we just thought it would be useful to talk about what these processes and what this culture is replacing. So I want you to imagine it's 2008 and you want to launch a website web app.
+BARRINGTON: Thanks, Ben. The first thing to point out is that, uh, DevOps practices, UM and culture is relatively new. So we just thought it would be useful to talk about what these processes and what this culture is replacing. So I want you to imagine it's 2008 and you want to launch a website web app.
 So you buy a server, basically just a big computer. You plug it in, you pay a person to set it up. This means installing all the software needed for the website, keeping the system maintained, keeping an eye on storage memory usage. Someone has to look at security backups. You need to connect it to a network, configure the network settings and this will include physical cables, probably an internal system of some sort, emails, packages, things of this nature.
 So you know, a lot of work. The developers just write the code and give it to the server maintainer. They don't care about the computers, they just want their code to run.
 So one day there was a problem.
@@ -43,6 +49,7 @@ And the more complex your website slash application becomes, the more complex ma
 
 ![Slide3](Slide3.jpeg)
 *fig 3: Slide 3 of the powperpoint*
+
 Transcript:
 BEN FIELDING: Thanks Barrington. So dev OPS really is a a combination of culture practices and tools that aims to increase the flow of value from the developer. Writing the code to the end user by improving the flow of communication.
 Making development more efficient, identifying cutting edge tooling that improves the efficiency of deployment cycles, and empowering the developers to do what they do best and write code.
@@ -54,11 +61,12 @@ So firstly, Barrington's gonna talk to you about a WS.
 
 ![slide4](Slide4.jpeg)
 *fig 4: Slide 4 of the powerpoint*
+
 Transcript:
-BARRINGTON BROOK: Thank you.
+BARRINGTON: Thank you.
 So as an infrastructure engineer, I want to easily and quickly create and scale resources so that we can meet customer demand.
 This seems like a relatively simple thing to ask, and we actually.
-Most of these tools and uh ways of working uh currently in Hackett team are done using a WS which is a DWP called services to say.
+Most of these tools and uh ways of working uh currently in Hackit team are done using a WS which is a DWP called services to say.
 All the tests and processes that I mentioned before that would previously have comprised of physical objects and people within our organization and now handled remotely in the cloud and can be managed either through writing software or using a web user interface.
 I'll now briefly go through a few terms that are associated and you might hear associated with their DWP S feel free to ask questions if this isn't clear, but I'm just gonna go through a few terms. The first is EC2.
 EC2 or you may hear an EC2 instance is a virtual computer that can act as a web server. We're able to configure security, networking, storage on these instances very easily, and it makes it a very flexible alternative to a physical on premises server. One of the advantages of this is it's very easily reproducible so we can scale to meet demand quickly just with the push of a button. You don't have to buy a service, set it up as I said before, and it can also be removed to scale down, which can save money.
@@ -72,6 +80,7 @@ Uh. Onto you, Ben.
 
 ![slide5](Slide5.jpeg)
 *fig 5: Slide 5 of the powerpoint*
+
 Transcript:
 BEN FIELDING: Our next user stories that that as a developer I want an environment that has everything I need for my program to run. So the apps are developed work in exactly the same way on any machine.
 Docker is a tool that we use to package applications as portable container images that will run in any environment consistently. This allows the developers to deliver applications easily and know that they'll run the same way in all environments from development through through to production.
@@ -82,8 +91,9 @@ The next user stories about Terraform Barrington.
 
 ![slide6](Slide6.jpeg)
 *fig 6: Slide 6 of the powerpoint*
+
 Transcript:
-BARRINGTON BROOK: Yep. So as a developer I went to ensure that my deployments work in the same way every time so that our site is always available and reliable for user. You may have noticed the general trend of reliability and availability and infrastructure as code. These are some of the core DevOps practices with regards to what Terraform actually is is. It's essentially a program.
+BARRINGTON: Yep. So as a developer I went to ensure that my deployments work in the same way every time so that our site is always available and reliable for user. You may have noticed the general trend of reliability and availability and infrastructure as code. These are some of the core DevOps practices with regards to what Terraform actually is is. It's essentially a program.
 Where they need to be West or any other cloud platform we can set-up and configure all of the infrastructure within the browser console, but this might be a time consuming process and we might not set-up the infrastructure in the same way each time. So we use this tool Terraform to deliver infrastructure as code which allows us to automate building our infrastructure and makes the configuration storable, repeatable and shareable. If you look at this little box here, there's some code saying resource AWS instance Web server.
 Yes, alongside lots of other curd when run will basically just allow us to access an EC2 instance to use as a web server.
 In the end of US cloud, so we don't have to buy a computer, we have to buy a server. I set it up, we just type this code in, run it and then it'll automatically appear within our platform.
@@ -91,6 +101,7 @@ Moving on to you then.
 
 ![slide7](Slide7.jpeg)
 *fig 7: Slide 7 of the powerpoint*
+
 Transcript:
 BEN FIELDING: And our our final user story is that uh, as a dev and as a whole department, we want to ensure that the code we we commit and and publish has no errors. So it works every time a new feature is deployed and in order to ensure that the releases work in the same way every single time we build pipelines that test the developers code and our infrastructure every time a new feature is staged for release.
 Umm, a pipeline is.
@@ -103,6 +114,8 @@ So if you have any questions now, we will endeavor to answer them.
 
 ![slide8](Slide8.jpeg)
 *fig 8: Slide 8 of the powerpoint*
+
+There were no questions asked at the end of the presentation and we received some good feedback from the people in attendance who felt it had cleared up some of their confusion and knowledge gaps about how the developer and operations teams worked together to provision the UNiversal Credit website. We also received positive feedback from our line managers following the presentation.
 
 ![feedback1](feedback1.png)
 *fig 9: Feedback received following presentation*
