@@ -35,3 +35,9 @@ module "transit_subnet_route_legacy_common_stage" {
 Involved running terraform plans in 12 repos, reviewing the changes, liasing with other team members to check changes and errors and then merging the feature branch. Ran into problems with vault permissions on the vault stack which I will step through.
 
 HACK 4175 - adding users to qa2 environment for access to Atlas Mongodb. Had to add email address to environment object in terraform file. Errors thrown so paired with Royston and he explained that user had to have an atlas account before plan could be applied.
+
+Advised mos who raised ticket and once account was set I was able to invite to relevant group. Once invite was accepted then I was able to add to the TF and apply the plan in relevant workspaces so the mos had access
+
+HACK 4231 - Cert renewal
+
+HACK 4234 gilab access for new MOS
