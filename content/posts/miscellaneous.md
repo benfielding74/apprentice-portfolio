@@ -40,4 +40,4 @@ Advised mos who raised ticket and once account was set I was able to invite to r
 
 HACK 4231 - Cert renewal
 
-HACK 4234 gilab access for new MOS
+HACK 4234 gitlab access for new MOS

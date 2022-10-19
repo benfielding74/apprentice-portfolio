@@ -4,15 +4,15 @@ date: 2022-08-22T15:49:39+01:00
 draft: true
 ---
 
-### Situation
+#### Situation
 
 Both myself and the other apprentice on my team were asked to put together a presentation to deliver to the Portfolio team during a monthly meeting. THe HackIt team tech lead wanted us to try to demystify some of the technology and terms we used day to day to provide infrastructure for the developers.
 
-### Task
+#### Task
 
 Our task was to prepare a presentation to be delivered to a non technical audience using powerpoint, or any similar presentation tool, which was to be fifteen to twenty minutes long. We had six weeks to prepare our material and deliver the presentation.
 
-### Actions
+#### Actions
 
 Planning -
 We held a meeting and used Mural as a virtual whiteboard to brainstorm our ideas for the presentation
@@ -21,7 +21,7 @@ We put together a rough powerpoint with some headings of topics we wanted to cov
 Delivering the presentation to Delivery Manager and Architect
 Rewrites and revisions following feedback from above
 
-### Result
+#### Result
 
 We delivered the presentation below to a broadly non technical audience of portfolio managers over a Teams call.
 
