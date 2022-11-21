@@ -1,6 +1,6 @@
 ---
 title: "Self Led Learning"
-date: 2022-06-29T10:43:06+01:00
+date: 2022-06-29T13:43:06+01:00
 draft: false
 ---
 

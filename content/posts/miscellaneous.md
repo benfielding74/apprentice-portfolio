@@ -41,3 +41,9 @@ Advised mos who raised ticket and once account was set I was able to invite to r
 HACK 4231 - Cert renewal
 
 HACK 4234 gitlab access for new MOS
+
+HACK - 161 Move Terraform to Gitlab CI/CD for non prod
+
+Hack 4237 Create AWS account and access using Terraform
+
+HACK 4235 - abstracting secrets from repo to pull from vault instead

@@ -42,3 +42,5 @@ Final part of my task was to prepare suitable documentation to explain the proce
 Outline of tickets/projects/accounts that we have worked in. Savings made. Need to finish those tickets.
 
 Short run through of use of my automation in the FAR ticket and further improvements made such as parrallelism and running on an instance to avoid timeouts caused by the VPN timing out etc
+
+Agile - iterations of my scripts to improve the process and handle new problems

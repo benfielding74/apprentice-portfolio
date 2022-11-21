@@ -1,7 +1,7 @@
 ---
 title: "Devops Presentation"
 date: 2022-08-22T15:49:39+01:00
-draft: true
+draft: false
 ---
 
 #### Situation
@@ -18,12 +18,11 @@ Our first step was to meet and decide what form our presentation would take and 
 
 We decided that using Powerpoint would be the best way to deliver the presentation, we looked at other options including Mural and Google Slides however we are unable to use google products on our machines and did not have much experience with using Mural as a presentation tool.
 
-We put together a rough powerpoint with a slide for each topic we had decided to cover in our whiteboard session and researched 3 topics each before writing up some delivery notes. We gave this outline then to our line managers to review and give feedback before fleshing it out again. 
+We put together a rough powerpoint with a slide for each topic we had decided to cover in our whiteboard session and researched 3 topics each before writing up some delivery notes. We gave this outline then to our line managers to review and give feedback before fleshing it out again.
 
 I built up the slides with images and titles and my colleague suggested that it would be a good idea to present each technology in the context of a user story that we could then use to present our solution in the form of a devops tool that we use. I thought this was a really good idea and gave us some experience in writing coherent user stories. We each wrote a user story for the slides we had researched and worked on the slide layout and styling together to ensure that we were presenting the information in a format that was easy to understand.
 
 Once we were satisfied we had a good presentation we arranged to present it to our team Delivery Manager and a Senior in the team so we could practice the delivery and timings and ensure that it made sense to both a technical and non-technical audience. We asked for feedback on the presentation and then carried rewrites adn revisions based on those notes.
-
 
 #### Result
 
@@ -114,6 +113,5 @@ There were no questions asked at the end of the presentation and we received som
 *fig 9: Feedback received following presentation*
 ![feedback2](feedback2.png)
 *fig 10: Feedback received following presentation*
-
 
 This task gave me an opportunity to look closely at the common tools and services that we use as a team. It highlighted for me how the different teams within DWP digital work together as a collaborative community. And it was a good opportunity to work with a fellow apprentice to complete a task. [(*B1*)]({{< ref "/posts/work-mapping-table#B1">}})
