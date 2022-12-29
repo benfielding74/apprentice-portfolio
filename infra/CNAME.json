@@ -1,0 +1,18 @@
+{
+	"Comment": " ",
+	"Changes": [
+		{
+			"Action": "CREATE",
+			"ResourceRecordSet": {
+				"Name": "_e1d56eea8c8274975026fdd0e9cf4113.bfieldingapprenticeportfolio.me.",
+				"Type": "CNAME",
+				"TTL": 600,
+				"ResourceRecords": [
+					{
+						"Value": "_62d5d56076daa6ad0e15fcaf1bd2e243.tjztrygkxr.acm-validations.aws."
+					}
+				]
+			}
+		}
+	]
+}

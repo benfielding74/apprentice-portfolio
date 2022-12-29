@@ -1,13 +1,23 @@
 # create an s3 bucket
 resource "aws_s3_bucket" "web_bucket" {
-  bucket = var.domain
+  bucket        = "www.${var.domain}"
   force_destroy = true
-
 }
 
-resource "aws_S3_acl" "web_bucket" {
+resource "aws_s3_bucket_acl" "web_bucket" {
   bucket = aws_s3_bucket.web_bucket.id
-  acl    = "public"
+  acl    = "public-read"
+}
+
+data "aws_iam_policy_document" "policy" {
+  statement {
+    principals {
+      type        = "*"
+      identifiers = ["*"]
+    }
+    actions   = ["s3:GetObject"]
+    resources = ["${aws_s3_bucket.web_bucket.arn}/*"]
+  }
 }
 
 resource "aws_s3_bucket_policy" "allow_public_access" {
@@ -25,7 +35,7 @@ resource "aws_s3_bucket_policy" "allow_public_access" {
         "s3:GetObject"
       ],
       "Resource": [
-        "arn:aws:s3:::${var.domain}/*"
+        "arn:aws:s3:::www.${var.domain}/*"
       ]
     }
   ]
@@ -41,7 +51,15 @@ resource "aws_s3_bucket_website_configuration" "web_bucket" {
   }
 
   error_document {
-    suffix = "404.html"
+    key = "404.html"
   }
+}
+
+resource "aws_s3_object" "object" {
+  for_each = fileset("/home/thelazydiarist/Code/apprentice-portfolio/public/", "**")
+  bucket   = aws_s3_bucket.web_bucket.id
+  key      = each.value
+  source   = "/home/thelazydiarist/Code/apprentice-portfolio/public/${each.value}"
+  acl      = "public-read"
 }
 
