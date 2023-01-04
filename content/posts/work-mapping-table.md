@@ -22,4 +22,5 @@ draft: false
 | K6  |  A range of problem solving techniques appropriate to the task at hand, such as affinity mapping, impact maps, plan-do-check-act/Deming. | hack-hw98  | Use of affinity mapping as a problem solving technique | <td id="K6"> [hack-hw98](/posts/hack-hw98) </td> |
 |  K23 | The importance of continual improvement within a blameless culture.  | hack-hw98 | Taking ownership of problems with the ticket solution and continuing to work on a better solution. I had to learn about the tools involved and continually improve my solution until it worked. | <td id="K23"> [hack-hw98](/posts/hack-hw98) </td> |
 | S13    |  Engage in productive pair/mob programming.    |  hack-hw43    | Pair programming with a senior on the team to find a solution to a problem   | <td id="S13"> [hack-hw43](/posts/hack-hw43) </td>     |
+| K20  | Pair/mob programming techniques and when to use each technique. | hack-hw43 | Explanation and exploration of pair programming techniques and when each may be appropriate | <td id="K20"> [hack-hw43](/posts/hack-hw43) </td>  |
 {{</table>}}
