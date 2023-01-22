@@ -1,4 +1,4 @@
-FROM klakegg/hugo AS hugo
+FROM klakegg/hugo:latest AS hugo
 
 
 COPY . /target
@@ -6,7 +6,7 @@ WORKDIR /target
 
 RUN hugo
 
-FROM nginx:1.15-alpine 
+FROM nginx:1.23-alpine 
 
 WORKDIR /usr/share/nginx/html/
 
@@ -18,6 +18,7 @@ COPY _docker/expires.inc /etc/nginx/conf.d/expires.inc
 RUN chmod 0644 /etc/nginx/conf.d/expires.inc
 
 COPY --from=hugo /target/public /usr/share/nginx/html
+
 
 
 
