@@ -43,7 +43,135 @@ HACK 4231 - Cert renewal
 HACK 4234 gitlab access for new MOS
 
 HACK - 161 Move Terraform to Gitlab CI/CD for non prod
+s:Implementing gitlab CI/CD in projects in non prod environments
+T: Implement Gitlab CI/CD to carry out code checks, plan, and apply Terraform.
+
+prepare and upload yml file for project to https://git.ss.build.uc.internal/dwp/uc/platform/hcl2/cicd-pipelines
+reference yml in CI/CD pipeline settings
+Update project variables
+Update README
+A:Written .yml file for project on feature branch in cicd-pipelines
+
+Spoken with Pete - Delivery Systems team who will provide project-config and vault access for the pipeline.
+R: implemented pipeline
+![pipeline](pipeline.png)
+Received feedback
+![feedback](feedback.png)
 
 Hack 4237 Create AWS account and access using Terraform
 
 HACK 4235 - abstracting secrets from repo to pull from vault instead
+
+HW-277 - Updating onboarding docs and creating off boarding docs including HW273 to update the start-here repo
+
+HACK 4361 - Fix the FAR Kong Persistence Service NOmad Health Check
+s: The Nomad health check for the FAR Kong Traefik service is failing (probably always has). The check isn't valid. 
+
+Example: https://consul.orc.mgmt-prod.uc.internal:8501/ui/eu-west-2/services/traefik-far-prod-kong/instances
+
+refer-to-provision-service/traefik repository.
+t:The correct endpoint is /ping. Adjust the health check as necessary, test in sandbox and then roll out to all envs.
+a: Clone the repo, update the variables, test.
+
+This did not go as planned -
+
+Original =
+check {
+        type     = "http"
+        port     = "https"
+        protocol = "https"
+        tls_skip_verify = true
+        path     = "/healthcheck"
+        interval = "30s"
+        timeout  = "15s"
+      }
+
+SI suggested change "/healthcheck" to "ping"
+May need to change protocol to http?
+
+First run >
+Pipeline acceptance always fails on the smoketest script. I need to check this.
+Should deploy to <https://consul.orc.mgmt-nonprod.uc.internal:8501/ui/eu-west-2/services>
+
+Agent is alive and reachable but no output at all for the check. Pipeline fails with http error 000 suggesting timeout or nothing at all at endpoint.
+
+Second run >
+Change protocol to http
+
+check {
+        type     = "http"
+        port     = "http"
+        protocol = "http"
+        tls_skip_verify = true
+        path     = "/ping"
+        interval = "30s"
+        timeout  = "15s"
+      }
+
+Something goes wrong with this and it doesn't even deploy?
+Tried to deploy again and double checked all of the env variables
+This time it deployed but I had forgotten to change to my branch
+
+Tried again and it doesn't seem to deploy even though the pipeline suggests that it does
+
+changed port back to https and left protocol as http which deployed but didn't pass checks again.
+
+Next step is to try endpoint health with this config
+Still not giving anything back
+
+Now testing mirroring /metrics (which works) by changing endpoint to /kong
+
+CHanging endpoint back to healthcheck with http protocol
+
+So I need to do a bit of research for the check block. Script seems to indicate /health so I'll try that as well
+
+docs suggest ping is the correct endpoint so why does that not work or not deploy?
+
+check {
+        type     = "http"
+        port     = "http"
+        protocol = "https"
+        tls_skip_verify = true
+        path     = "/ping"
+        interval = "30s"
+        timeout  = "15s"
+      }
+
+doesn't deploy
+
+check {
+        type     = "http"
+        port     = "http"
+        protocol = "http"
+        tls_skip_verify = true
+        path     = "/ping"
+        interval = "30s"
+        timeout  = "15s"
+      }
+
+doesn't deploy
+
+Tried running without a specific port and the kong service will not configure and plan fails
+Result/Outcome:
+
+Final change looked like:
+  check {
+    type      = "http"
+    port      = "traefik" # which is hitting port 8081
+    protocol  = "http"
+    tls_skip_verify   = true
+    path      = "/ping"
+    interval  = "30s"
+    timeout   = "15s"
+  }
+
+What I discovered through reading the documents and examining the existing job in prometheus(which did work) is that you have to declare a ping endpoint as so:
+
+  traefik-kong:
+    dashboard: true
+    insecure: true
+  ping:
+    entryPoint: "traefik"
+
+Changed was applied in sandbox and MR merged with no comment. Then I rolled out in all non prod envs. Everything up to stage is handled in gitlab ci/cd with stage and prod being handled in Jenkins still (SDP issue).
+
