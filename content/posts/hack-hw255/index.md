@@ -34,3 +34,6 @@ A request for access to prod database has been approved by SDS for them to have 
 
 * What did I learn
 * Benefits to the business
+
+
+KSB's - potentially K3 implications of giving access to a prod database with live customer data, automation with Terraform ensuring that measures are in place to remove access - mongo db compass facility to grant 6 hours access

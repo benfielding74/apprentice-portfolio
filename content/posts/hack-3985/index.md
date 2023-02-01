@@ -58,4 +58,4 @@ What did I learn and how did this benefit the team and the business?
 Short run through of use of my automation in the FAR ticket and further improvements made such as parrallelism and running on an instance to avoid timeouts caused by the VPN timing out etc
 
 Agile - iterations of my scripts to improve the process and handle new problems.
-Any other KSB's and references?
+Any other KSB's and references? S8
