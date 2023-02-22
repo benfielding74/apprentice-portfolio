@@ -1,18 +1,18 @@
 ---
 title: "Hack 3985"
-date: 2022-09-30T09:57:16+01:00
-draft: true
+date: 2022-11-30T09:57:16+01:00
+draft: false
 ---
 
-#### Situation
+### Situation
 
 Legacy accounts were created for dedicated applications which are now defunct with resources in these accounts still incurring costs to the organisation. Automating the deletion of AWS resources in legacy accounts is required for reducing costs and security risks.
 
-#### Task
+### Task
 
 My colleague and I were tasked with auditing legacy accounts, recording costs, and creating a solution for automating the removal of resources after migrating application logs to a new and dedicated log account. We discovered that our current manual processes were inefficient and time-consuming due to the sheer amount of accounts that needed to be audited, and the number of resources in each account. The solution we proposed was to create a set of scripts that could be run to delete cloud resources after they had been migrated, reducing the time it took to decommission an account by a considerable amount.
 
-#### Action
+### Action
 
 Working with the delivery manager and tech lead, we broke the 'Epic' into more manageable tasks. We began by auditing and recording costs for each account, and then testing our automation on non production accounts with a set of project tags and resources mapped. We then identified opportunities for cost savings, and created scripts to automate resource deletion. Finally, we successfully ran the automation script across the legacy accounts, reducing costs and risks associated with them.
 
@@ -48,19 +48,24 @@ As a result of reading the documentation, I decided that this would be the best 
 
 I took the opportunity whilst waiting for the Cloudwatch log group exports to complete to refactor my first set of bash scripts into Python as well.
 
-My colleague encountered a blocker in his ticket to migrate logs across accounts, which we discussed. Logs that had been archived using AWS Glacier Flexible Retrieval storage class could not be migrated without a process involving retrieving them from storage, copying them to another S3 bucket and then moving them to a new account. We discussed how we could resolve this and also asked our team if they had any solutions. One of the team advised that if we created a bucket in Terraform with a replication policy then we could copy the files easily within the source account and they would be replicated in the log account without needing to set up permissions to copy across accounts. We decided that this was the route we would take to save some time and assigned ourselves tasks to complete this. I would write another script that would retrieve the objects from storage then copy them to a created S3 bucket with replication policy attached.
+My colleague encountered a blocker in his ticket to migrate logs across accounts, which we discussed. Logs that had been archived using AWS Glacier Flexible Retrieval storage class could not be migrated without a process involving retrieving them from storage, copying them to another S3 bucket and then moving them to a new account.[(*1*)]({{< ref "/posts/reference-list#1">}}) We discussed how we could resolve this and also asked our team if they had any solutions. One of the team advised that if we created a bucket in Terraform with a replication policy then we could copy the files easily within the source account and they would be replicated in the log account without needing to set up permissions to copy across accounts. We decided that this was the route we would take to save some time and assigned ourselves tasks to complete this. I would write another script that would retrieve the objects from storage then copy them to a created S3 bucket with replication policy attached.
 
-As I had written my other scripts in a modular fashion I could reuse some functions in my retrieval script. The problems that I had to solve whilst building this scripts were associated with limitations in how many objects could be processed at a time. The limit to how many objects could be processed at a time was set to 1000. I had to implement pagination into my script which is a boto3 method that allows you to continue calling objects into new arrays for processing. I implemented this and also implemented error handling to stop my script from exiting if there was a known issue such as an object not in storage or already in the process of being retrieved. Some of the buckets we were working with contained millions of objects which led to long wait times to retrieve. A suggestion was made that parallelism could be used to increase efficiency of the script. With parallel programming, a computer can execute multiple instructions simultaneously. With the python boto3 library I was able to process 10 arrays of 1000 items simultaneously which considerably reduced the time taken to complete the retrieval.
+As I had written my other scripts in a modular fashion I could reuse some functions in my retrieval script. The problems that I had to solve whilst building this scripts were associated with limitations in how many objects could be processed at a time. The limit to how many objects could be processed at a time was set to 1000. I had to implement pagination into my script which is a boto3 method that allows you to continue calling objects into new arrays for processing.[(*2*)]({{< ref "/posts/reference-list#2">}}) I implemented this and also implemented error handling to stop my script from exiting if there was a known issue such as an object not in storage or already in the process of being retrieved.[(*3*)]({{< ref "/posts/reference-list#3">}}) Some of the buckets we were working with contained millions of objects which led to long wait times to retrieve. A suggestion was made that parallelism could be used to increase efficiency of the script. With parallel programming, a computer can execute multiple instructions simultaneously. With the python boto3 library I was able to process 10 arrays of 1000 items simultaneously which considerably reduced the time taken to complete the retrieval.
 
-My final action in this project was to update the documentation to explain the process and how the scripts could be used. This involved updating README’s in the project repository and creating a wiki page in the team confluence area with a process map and instructions
+My final action in this project was to update the documentation to explain the process and how the scripts could be used. This involved updating README’s in the project repository and creating a wiki page in the team confluence area with a process map and instructions.
 
-#### Result
+![Project process map](new_decom_flow.jpg)
 
-This was a complicated project to work on but I learnt a great deal over the course of the project such as bash scripting, how to use AWS cli commands to query, create and destroy resources, using python scripting and especially the AWS boto3 library, to create faster and cleaner scripts. I felt I worked in a manner consistent with Agile methodology, working on tickets in short iterations, typically lasting two to four weeks, with each iteration resulting in a working, tested incremental improvement. I followed principles and practices such as continuous planning, testing, integration, and delivery, as well as seeking frequent feedback and adaptating my approach based on this feedback.
+*Fig 4: Process map completed as part of the documentation stage of the project*
+
+### Result
+
+This was a complicated project to work on but I learnt a great deal over the course of the project such as bash scripting, how to use AWS cli commands to query, create and destroy resources, using python scripting and especially the AWS boto3 library, to create faster and cleaner scripts. I felt I worked in a manner consistent with Agile methodology, working on tickets in short iterations, typically lasting two to four weeks, with each iteration resulting in a working, tested incremental improvement. I followed principles and practices such as continuous planning, testing, integration, and delivery, as well as seeking frequent feedback and adapting my approach based on this feedback.[(*S8*)]({{< ref "/posts/work-mapping-table#S8.1">}})
 
 how did this benefit the team and the business?
 
-The most satisfying part of the project for me was reviewing the cost dashboards at the end of the project. By automating this process, not only did it improve the efficiency of our team, but it also reduced costs and improved security by eliminating any unnecessary resources in inactive accounts. We made a cost saving of 59% per month, saving DWP something in the region of £50k between June 2022 and November 2022. By putting in place automation of the decommisioning process we saved the team countless man hours. The tools we created as part of this project have been subsequently used to decommision two further applications. I worked on both of these projects and had the opportunity to make further improvements to the process by adapting the scripts to run on an EC2 instance in the legacy accounts so they could run in the background without needing to tie up resource on a team members machine. The project received good feedback from the Head of infrastructure and from other senior members of the Digital practice.
+The most satisfying part of the project for me was reviewing the cost dashboards at the end of the project. By automating this process, not only did it improve the efficiency of our team, but it also reduced costs and improved security by eliminating any unnecessary resources in inactive accounts. We made a cost saving of 59% per month, saving DWP something in the region of £50k between June 2022 and November 2022. By putting in place automation of the decommissioning process we saved the team countless man hours. The tools we created as part of this project have been subsequently used to decommission two further applications. I worked on both of these projects and had the opportunity to make further improvements to the process by adapting the scripts to run on an EC2 instance in the legacy accounts so they could run in the background without needing to tie up resource on a team members machine. The project received good feedback from the Head of infrastructure and from other senior members of the Digital practice.
 
+![Feedback](feedback.png)
 
-Any other KSB's and references? S8
+*Fig 5: example of feedback received following the project*
