@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.92.2" /><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Ben Fielding - Apprenticeship Portfolio</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d7fb4cbf980fe688a21621b06a795933c4e6bb2d4070ec940667af1715d84af2.css" integrity="sha256-1/tMv5gP5oiiFiGwanlZM8Tmuy1AcOyUBmevFxXYSvI=" rel="preload stylesheet" as="style">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Ben Fielding - Apprenticeship Portfolio" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ben Fielding - Apprenticeship Portfolio"/>
+<meta name="twitter:description" content=""/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ben Fielding - Apprenticeship Portfolio",
+  "url": "/",
+  "description": "",
+  "thumbnailUrl": "/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/" accesskey="h" title="Ben Fielding - Apprenticeship Portfolio (Alt + H)">Ben Fielding - Apprenticeship Portfolio</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/contents/" title="contents">
+                    <span><i class='fa fa-heart'></i>contents</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2>hack-hw43
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Situation VPC flow logs are retained for 30 days in both prod and nonprod environments. Following an audit of logs a ticket was raised to investigate what our log retention periods should be and to make the required changes to our infrastructure.
+Task The scope of the ticket was to contact Secure Design Services to find out what log retention periods should be set at and then make the required changes to our core-infra stack to implement this....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 15:55:12 +0000 UTC'>November 22, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to hack-hw43" href="/posts/hack-hw43/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>hack-hw98
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Situation A developer team working the Find and Refer service are alerted within a Slack channel when a file is added to some specific targeted AWS s3 buckets. They have made a request which has been added to the HACK team sprint as a working ticket. They have requested that ‘to support incident management and ease repetitive cognitive load’ they would also like to be alerted when specific files have NOT been added to their buckets by a given time....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-18 14:00:48 +0100 BST'>October 18, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to hack-hw98" href="/posts/hack-hw98/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Devops Presentation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Situation Within DWP Digital we have a Portfolio team who have overall responsibility for the products and feature teams. When our team need to give updates on progress with platform infrastructure for apps or new products there is sometimes confusion about the tools, processes and language we use as the team is non-technical.
+Task Myself and another apprentice were asked if we would prepare and deliver a 15 minute presentation to facilitate knowledge sharing with the Portfolio team....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-08-22 15:49:39 +0100 BST'>August 22, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Devops Presentation" href="/posts/devops-presentation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>hack-3975
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Situation A request for a feature was added to team Kanban board. In a legacy project the Devs received a notification to a Slack channel whenever a file is added or deleted from their S3 buckets. They were requesting that this functionality be added to the current project.
+ As a developer I would like to receive a notification into the #uc-far-prod-alerts Slack channel whenever an object is added to or deleted from the new S3 buckets....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-30 12:05:16 +0100 BST'>June 30, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to hack-3975" href="/posts/hack-3975/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Release 0
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Introduction About Me I am Ben Fielding and I work at Department for Work and Pensions, within the Digital Group, as an Apprentice DevOps engineer. My background is mainly in the private sector working within the parking industry. Some of my experience with technology was gained through configuring and repairing parking equipment. Prior to being made redundant in January 2020 I was department lead on a project to build and launch a parking app, which gave me some experience of writing tests, testing, doing user research and working in sprints....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-30 10:26:56 +0100 BST'>June 30, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Release 0" href="/posts/release0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Reference List
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Reference Type Details Viewed Link Number      Web page Alex W L Chan, July 2019, ‘Listing even more keys in an s3 bucket with Python’ 25/08/22 https://alexwlchan.net/2019/07/listing-s3-keys/ 1    Web Page AWS Documentation, ‘Restoring an archived object’ 19/08/22 https://docs.aws.amazon.com/AmazonS3/latest/userguide/restoring-objects.html     Web Page Boto3 Docs 1.24.59, ‘Error Handling’ 25/08/22 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/error-handling.html     Web Page Prometheus issues on github, ‘Schedules for scrape configs and alerts #6209’ 09/11/22 https://github....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-29 14:59:39 +0100 BST'>June 29, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Reference List" href="/posts/reference-list/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Self Led Learning
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Team specific courses undertaken during my apprenticeship
+  Course title Provider Link to course content Time spent completing Tools and Technologies covered     Setting Up Lambda Functions with S3 Event Triggers Cloud Guru https://learn.acloud.guru/handson/d8c86c01-2a5d-4a37-9e3c-d0216bb75220 1 Hour AWS IAM, SNS, Lambda, s3api   Hashicorp Certified: Terraform Associate Pluralsight https://app.pluralsight.com/paths/certificate/hashicorp-certified-terraform-associate 8 hours Hashicorp Terraform Certification Path   Technical Writing Courses Google https://developers.google.com/tech-writing 2 hours Covering how to write effective technical documents    </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-29 13:43:06 +0100 BST'>June 29, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Self Led Learning" href="/posts/self-led-learning/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Work Mapping Table
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>KSB no. KSB Description What Tickets have met this standard Overview of how I met KSB Link to ticket page     S8 Work in agile, multi-disciplinary delivery teams, taking a flexible, collaborative and pragmatic approach to delivering tasks. release 0 Collaborating with other members of the team to plan work and deliver features release 0   K22 How their occupation fits into the wider digital landscape and any current or future regulatory requirements....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-29 12:05:16 +0100 BST'>June 29, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Work Mapping Table" href="/posts/work-mapping-table/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Key Skills Matrix
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Knowledge, Skills and Behaviours The professional discussion focuses on 20 Knowledge, Skills and Behaviours which are demonstrated within the portfolio
+  KSB Description     K3 How to use data ethically and the implications for wider society, with respect to the use of data, automation and artificial intelligence within the context of relevant data protection policy and legislation.   K6 A range of problem solving techniques appropriate to the task at hand, such as affinity mapping, impact maps, plan-do-check-act/Deming....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-28 12:05:16 +0100 BST'>June 28, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Key Skills Matrix" href="/posts/key-skills-matrix/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="/">Ben Fielding - Apprenticeship Portfolio</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

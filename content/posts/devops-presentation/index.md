@@ -107,7 +107,7 @@ So if you have any questions now, we will endeavor to answer them.
 ![slide8](Slide8.jpeg)
 *fig 8: Slide 8 of the powerpoint*
 
-There were no questions asked at the end of the presentation and we received some good feedback from the people in attendance who felt it had cleared up some of their confusion and knowledge gaps about how the developer and operations teams worked together to provision the Universal Credit website. We also received positive feedback from our line managers following the presentation which demonstrates that we communicated clearly and credibly to our audience. [(*S1*)]({{< ref "/posts/work-mapping-table#S1">}})
+At the end of the presentation we asked if anyone had any questions and checked if they had understood all of the concepts we had covered. We received some good feedback from the people in attendance who felt it had cleared up some of their confusion and knowledge gaps about how the developer and operations teams worked together to provision the Universal Credit website. We also received positive feedback from our line managers following the presentation which demonstrates that we communicated clearly and credibly to our audience. [(*S1*)]({{< ref "/posts/work-mapping-table#S1">}})
 
 ![feedback1](feedback1.png)
 *fig 9: Feedback received following presentation*
