@@ -20,7 +20,7 @@ This was a 'hands on lab' which Cloud Guru describe as 'real environments create
 
 ### Terraform - Getting Started
 
-This course is part of the Hashicorp Certified: Terraform Associate pathway on Pluralsight which acts as preparation for the certification exam.*add link to KSB*
+This course is part of the Hashicorp Certified: Terraform Associate pathway on Pluralsight which acts as preparation for the certification exam.[K25]
 
 The course covers the basics of Infrastructure as code before getting into Terraform specifics. The first module covers essential foundational knowledge of Hashicorps Terraform software. In this I covered the foundations of writing, planning and creating automated Infrastructure deployments. It covered the basic Terraform configuration and then covered using functions,modules and worksapces which is very relevant for my placement role.
 
