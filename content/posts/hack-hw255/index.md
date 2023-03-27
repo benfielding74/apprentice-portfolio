@@ -20,9 +20,10 @@ I found I could grant a level of Read and Write access to the production databas
 
 I would need to grant Database Read Access, which is a  level of access above Read Only, which allows the user to select and get data. In peer review with my team, seniors didn’t think this level of access was within the scope of the SDS ticket and so I needed to clarify with SDS if this would be ok. It was also suggested that I should raise a support ticket with MongoDB to confirm the minimum access level to the database to create charts. SDS confirmed that the developers had the necessary security clearance to have full access to the production database for the duration of their task as long as this was subsequently revoked and no access was granted to any other databases. I also received a response from MongoDB support confirming that the level of access I would need to give for Charts functionality would be the Database Read access that I had identified through my research.
 
-I documented the process and applied everything in Terraform so it was a repeatable process and then put in a merge request for my branch. I also commented the code to identify that this was a temporary change. *show code example* My code was reviewed by a senior engineer and he suggested a refactor using existing resource blocks in the Terraform. I changed my code in line with his suggestion and then put in a second merge request which was accepted and merged to the master branch.
+I documented the process and applied everything in Terraform so it was a repeatable process and then put in a merge request for my branch. I also commented the code to identify that this was a temporary change. My code was reviewed by a senior engineer and he suggested a refactor using existing resource blocks in the Terraform. I changed my code in line with his suggestion and then put in a second merge request which was accepted and merged to the master branch.
 
-*add final code solution*
+![terraform solution for charts users](adding_charts_permissions.png)
+*Fig 1: Example of adding permissions for users as part of a user group*
 
 ### Result.
 
