@@ -28,3 +28,23 @@ The course covers the basics of Infrastructure as code before getting into Terra
 
 *Fig 3: An overview of the course content*
 
+### Network Concepts And Protocols
+
+This course is designed to teach the fundamentals of data networking and is part of the CompTIA Network+ learning pathway.
+
+![An example of the course content](pluralsight_networking.png)
+
+*Fig 4: An overview of the course contents*
+
+### Getting Started with Linux
+
+This course teaches you the basics of installing and managing Linux systems and is part of the LPI Linux Essentials Path. The course introduces you to the Linux OS and open source software. It covers installing and managing server applications such as the Apache web server. As part of the course I have utilised Oracle Virtualbox to set up and manage a Centos server.
+
+![An example of the course content](pluralsight_linux.png)
+
+*Fig 5: An overview of the course contents*
+
+
+
+
+
