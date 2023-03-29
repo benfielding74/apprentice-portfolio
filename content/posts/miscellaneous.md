@@ -60,7 +60,25 @@ Received feedback
 
 Hack 4237 Create AWS account and access using Terraform
 
-HACK 4235 - abstracting secrets from repo to pull from vault instead
+HACK 4235 - abstracting secrets from repo to pull from vault instead -
+  when to use plan do check act cycle:
+  - starting a new imporvement project
+  -developing a new or improved design of a process, product or service
+  -implementing any change
+
+  Plan - plan what needs to be done
+  what is the core problem that needs to be solved
+  what resources do we have
+  what resources do we need
+  what is the best solution for fixing the problem
+  definition of done/what are the goals/what does success look like
+
+  DO - apply everything that has been considered during the previous stage -incorporate on a small scale in a controlled environment
+
+  Check - audit the plans execution see if it worked and monitor, analyse faults and problems
+
+  Act - adopt if objectives met, may become standard baseline, make improvements
+  
 
 HW-277 - Updating onboarding docs and creating off boarding docs including HW273 to update the start-here repo
 
@@ -174,4 +192,6 @@ What I discovered through reading the documents and examining the existing job i
     entryPoint: "traefik"
 
 Changed was applied in sandbox and MR merged with no comment. Then I rolled out in all non prod envs. Everything up to stage is handled in gitlab ci/cd with stage and prod being handled in Jenkins still (SDP issue).
+
+
 
