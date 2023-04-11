@@ -14,4 +14,6 @@ Team specific courses undertaken during my apprenticeship
 | Technical Writing Courses | Google | <https://developers.google.com/tech-writing> | 2 hours | Covering how to write effective technical documents |
 | Network Concepts and Protocols | Pluralsight |[Examples of course content](/posts/self-led-learning-examples) | 3 hours | CompTIA Network+ Path |
 | Getting Started With Linux | Pluralsight | [Examples of course content](/posts/self-led-learning-examples) | 1 Hour 44 minutes | LPI Linux Essentials Path |
+| Understanding IAM | AWS Tech Enablement session | [Examples of course content](/posts/self-led-learning-examples) | 1 hour | Covering IAM foundation principles, writing IAM policies and working towards least privilege |
+| Applying Professional Scrum | Quanta Training | <https://www.scrum.org/courses/applying-professional-scrum-training?gclid=CjwKCAjwitShBhA6EiwAq3RqA7Q-QKBBJAPOGRys-aF2OFwQLd34IBabGdr3crSjUL5VGvJtsYLiZRoCmtsQAvD_BwE>  | 16 hours | Course covering the Fundamentals of the Scrum framework with PSM 1 certification |
 {{</table>}}

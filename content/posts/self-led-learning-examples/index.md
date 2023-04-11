@@ -44,7 +44,18 @@ This course teaches you the basics of installing and managing Linux systems and 
 
 *Fig 5: An overview of the course contents*
 
+### Understanding IAM
 
+This was an AWS Tech enablement session hosted by AWS and attended online via Teams. The hour long session covered IAM foundation principles, writing IAM policies and working towards least privilege when defining policies and permissions for cloud resources. There was a short quiz by the facilitator to check understanding.
 
+![AWS policy types](AWS_Policy_types.png)
 
+*Fig 6: AWS IAM policy types*
 
+![AWS PARC model](AWS_PARC_model.png)
+
+*Fig 7: AWS PARC model*
+
+![AWS authorisation examples](AWS_auth.png)
+
+*Fig 8: AWS authorisation logic*
