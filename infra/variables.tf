@@ -15,9 +15,3 @@ variable "domain" {
   description = "Apex domain name"
   default     = "bfieldingapprenticeportfolio.me"
 }
-
-variable "s3_origin_id" {
-  type        = string
-  description = "Used for the cloudfront setup"
-  default     = "apprenticeportfolio"
-}

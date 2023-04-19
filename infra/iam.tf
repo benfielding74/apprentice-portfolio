@@ -1,0 +1,1 @@
+# iam policy for ECS to pull image from ecr
