@@ -17,9 +17,7 @@ resource "aws_lb" "portfolio" {
   internal           = false
   load_balancer_type = "application"
 
-  subnets = [
-    aws_subnet.portfolio.id
-  ]
+  subnets = [for subnet in aws_subnet.portfolio : subnet.id]
 
   security_groups = [
     aws_security_group.instance_security_group.id

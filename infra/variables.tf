@@ -15,3 +15,9 @@ variable "domain" {
   description = "Apex domain name"
   default     = "bfieldingapprenticeportfolio.me"
 }
+
+variable "availability_zones" {
+  type    = list(string)
+  description = "Subnet availability zones"
+  default = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
+}

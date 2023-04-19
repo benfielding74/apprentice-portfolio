@@ -5,17 +5,14 @@ resource "aws_vpc" "portfolio" {
 
 # Create a subnet
 resource "aws_subnet" "portfolio" {
-  vpc_id     = aws_vpc.portfolio.id
-  cidr_block = "10.0.1.0/24"
+  count = length(var.availability_zones)
+
+  vpc_id            = aws_vpc.portfolio.id
+  cidr_block        = "10.0.${count.index}.0/24"
+  availability_zone = var.availability_zones[count.index]
 }
 
 # Create an Internet Gateway
 resource "aws_internet_gateway" "portfolio" {
   vpc_id = aws_vpc.portfolio.id
-}
-
-# Attach the Internet Gateway to the VPC
-resource "aws_internet_gateway_attachment" "portfolio" {
-  internet_gateway_id = aws_internet_gateway.portfolio.id
-  vpc_id              = aws_vpc.portfolio.id
 }

@@ -1,17 +1,17 @@
 # Create an EC2 instance
 resource "aws_instance" "portfolio" {
-  ami           = "ami-0c94855ba95c71c99"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.portfolio.id
+  subnet_id     = aws_subnet.portfolio[0].id
   vpc_security_group_ids = [
     aws_security_group.instance_security_group.id
   ]
 
   user_data = <<-EOF
                       #!/bin/bash
-                      aws ecr get-login-password --region <ECR_REGION> | docker login --username AWS --password-stdin <ECR_REPO_URL>
-                      docker pull <ECR_REPO_URL>/<DOCKER_IMAGE>
-                      docker run -p 80:80 <ECR_REPO_URL>/<DOCKER_IMAGE>
+                      aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 617111187959.dkr.ecr.eu-west-2.amazonaws.com
+                      docker pull 617111187959.dkr.ecr.eu-west-2.amazonaws.com/app-portfolio
+                      docker run -p 80:80 617111187959.dkr.ecr.eu-west-2.amazonaws.com/app-portfolio
                       EOF
 }
 
