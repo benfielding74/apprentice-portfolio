@@ -7,6 +7,9 @@ theme = "PaperMod"
         URL = "https://github.com/benfielding74/apprentice-portfolio/tree/main/content"
         Text = "Suggest Changes" # edit text
         appendFilePath = true # to append file path to Edit link
+
+[Params]
+    version = "v2.3.2"
         
 [menu]
 
