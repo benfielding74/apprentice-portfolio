@@ -191,7 +191,7 @@ What I discovered through reading the documents and examining the existing job i
   ping:
     entryPoint: "traefik"
 
-Changed was applied in sandbox and MR merged with no comment. Then I rolled out in all non prod envs. Everything up to stage is handled in gitlab ci/cd with stage and prod being handled in Jenkins still (SDP issue).
+Change was applied in sandbox and MR merged with no comment. Then I rolled out in all non prod envs. Everything up to stage is handled in gitlab ci/cd with stage and prod being handled in Jenkins still (SDP issue).
 
-
+ami-refresh project
 
