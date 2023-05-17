@@ -59,3 +59,5 @@ This was an AWS Tech enablement session hosted by AWS and attended online via Te
 ![AWS authorisation examples](AWS_auth.png)
 
 *Fig 8: AWS authorisation logic*
+
+
