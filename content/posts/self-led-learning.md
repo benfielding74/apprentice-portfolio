@@ -16,5 +16,5 @@ Team specific courses undertaken during my apprenticeship
 | Getting Started With Linux | Pluralsight | [Examples of course content]({{< ref "/posts/self-led-learning-examples" >}}) | 1 Hour 44 minutes | LPI Linux Essentials Path |
 | Understanding IAM | AWS Tech Enablement session | [Examples of course content]({{< ref "/posts/self-led-learning-examples" >}}) | 1 hour | Covering IAM foundation principles, writing IAM policies and working towards least privilege |
 | Applying Professional Scrum | Quanta Training | <https://www.scrum.org/courses/applying-professional-scrum-training?gclid=CjwKCAjwitShBhA6EiwAq3RqA7Q-QKBBJAPOGRys-aF2OFwQLd34IBabGdr3crSjUL5VGvJtsYLiZRoCmtsQAvD_BwE>  | 16 hours | Course covering the Fundamentals of the Scrum framework with PSM 1 certification |
-| AWS Certified Cloud Practioner | Pluralsight | [Examples of course content]({{< ref "/posts/self-led-learning-examples" >}}) | 3 hours | Completing materials on certification path for AWS Certified Cloud Practioner |
+| AWS Certified Cloud Practioner | Pluralsight | [Examples of course content]({{< ref "/posts/self-led-learning-examples" >}}) | 9 hours | Completing materials on certification path for AWS Certified Cloud Practioner |
 {{</table>}}

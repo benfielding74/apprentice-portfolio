@@ -22,7 +22,7 @@ This was a 'hands on lab' which Cloud Guru describe as 'real environments create
 
 This course is part of the Hashicorp Certified: Terraform Associate pathway on Pluralsight which acts as preparation for the certification exam.[(*K25*)]({{< ref "/posts/work-mapping-table#K25">}})
 
-The course covers the basics of Infrastructure as code before getting into Terraform specifics. The first module covers essential foundational knowledge of Hashicorps Terraform software. In this I covered the foundations of writing, planning and creating automated Infrastructure deployments. It covered the basic Terraform configuration and then covered using functions,modules and worksapces which is very relevant for my placement role.
+The course covers the basics of Infrastructure as code before getting into Terraform specifics. The first module covers essential foundational knowledge of Hashicorp's Terraform software. In this I covered the foundations of writing, planning and creating automated Infrastructure deployments. It covered the basic Terraform configuration and then covered using functions,modules and worksapces which is very relevant for my placement role.
 
 ![An example of the course content](pluralsight_terraform_getting_started.png)
 
@@ -60,4 +60,15 @@ This was an AWS Tech enablement session hosted by AWS and attended online via Te
 
 *Fig 8: AWS authorisation logic*
 
+### AWS Certified Cloud Practioner Exam Preparation path
+
+This is a Pluralsight course designed to prepare you for AWS Cloud Certification with a mix of videos, exercise material and labs to give you an overview of the cloud services AWS offers. The labs covered setting up an s3 bucket for static web hosting, configuring an EC2 instance as a web server and setting up users with IAM.
+
+![AWS architecture](aws_sec_and_arc.jpeg)
+
+*Fig 9: An example of the course content with this module demonstrating Security and Architecture*
+
+![AWS IAM lab](aws_iam_lab.jpeg)
+
+*Fig 10: AN example of the lab content within this course*
 
