@@ -508,5 +508,7 @@ class SlackNotifications:
 ```
 Update Terraform HW 458
 
+UPgrade COnsul and NOmad - security, patching etc
+
 
 
