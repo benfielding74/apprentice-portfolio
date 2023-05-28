@@ -1,12 +1,12 @@
 ---
 title: "Hack 4361"
-date: 2023-05-23T18:57:19+01:00
+date: 2023-01-23T18:57:19+01:00
 draft: true
 ---
 
 ### Situation
 
-The Nomad health check for the Find and Refer kong-traefik[^1] service is failing. Following Traefik deployment a smoke test is run, this test simply curls some endpoints specific to the deployment. A response code HTTP 200 is the expected response, anything else will cause the health check to fail. Some preliminary investigation has identified that the health check is curling an incorrect end point.
+The Nomad health check for the Find and Refer kong-traefik service is failing[^1]. Following Traefik deployment a smoke test is run, this test simply curls some endpoints specific to the deployment. A response code HTTP 200 is the expected response, anything else will cause the health check to fail. Some preliminary investigation has identified that the health check is curling an incorrect end point.
 
 ### Task
 
@@ -45,7 +45,7 @@ check {
   }
 
   ```
-  
+
 This configuration would not even allow the Traefik instance to deploy or become available though the Jenkins pipeline does not give any errors and suggests that the deployment has been successful. The Traefik documentation suggests that `/ping` is the correct endpoint but that does not work. The protocol does need to be `https` for a successful deployment. I also tried to run without a specific port value as suggested in some examples seen on the internet but that does not allow the Kong service to be configured and the deployment pipeline fails.
 
 I reviewed the documentation again and examined an existing job in Prometheus(which was working). What I discovered was that a ping endpoint has to be declared within the traefik-kong configuration before it is used in the check stanza. My final configuration was this
@@ -76,6 +76,4 @@ I applied this configuration in the sandbox environment and checked against the 
 
 This ticket gave me an opportunity to learn about Traefik and reverse proxies. I learnt how they are configured and also learnt about carrying out healthchecks on endpoints adn the importance of this in monitoring our infrastructure.
 
-[^1] *Kong Gateway is a lightweight, fast, and flexible cloud-native API gateway. An API gateway is a reverse proxy that lets you manage, configure, and route requests to your APIs. Kong Gateway runs in front of any RESTful API and can be extended through modules and plugins. It’s designed to run on decentralized architectures, including hybrid-cloud and multi-cloud deployments.*
-
-*Traefik is a reverse proxy that sits between client requests and the backend services that handle those requests. It works by inspecting incoming requests and using a set of rules to determine how to route the request to the appropriate backend service*
+[^1]: ***Kong Gateway** is a lightweight, fast, and flexible cloud-native API gateway. An API gateway is a reverse proxy that lets you manage, configure, and route requests to your APIs. Kong Gateway runs in front of any RESTful API and can be extended through modules and plugins. It’s designed to run on decentralized architectures, including hybrid-cloud and multi-cloud deployments. **Traefik** is a reverse proxy that sits between client requests and the backend services that handle those requests. It works by inspecting incoming requests and using a set of rules to determine how to route the request to the appropriate backend service*
