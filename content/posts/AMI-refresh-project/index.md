@@ -148,4 +148,7 @@ def lambda_handler(event, context):
 
 ```
 
+The other project members had been working on testing that the refreshed ASG's were healthy and implementing Terraform to grant neccesary permissions and to deploy the Lambda's. At this stage we held another project meeting and a show and tell session to talk through our work with other members of the team. THe feedback overall was good but there was some concern about how we were going to orchestrate the four Lambdas we now had deployed and that our initial testing process was not sufficient to determine if applications were running. We decided to carry out some further research and see how we could address the concerns raised.
+
+
 ### Result
