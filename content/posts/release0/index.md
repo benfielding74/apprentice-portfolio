@@ -1,5 +1,7 @@
 ---
 title: "Release 0"
+categories: [profession in context, continuous learning and development]
+tags: [agile, multi-disciplinary teams, how their occupation fits into the wider digital landscape, invests time and effort into their own development]
 date: 2022-06-30T10:26:56+01:00
 draft: false
 ---

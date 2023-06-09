@@ -1,5 +1,7 @@
 ---
 title: "hack-hw98"
+categories: [problem solving, organisational culture, communicating and knowledge sharing]
+tags: [problem solving, affinity mapping, continuous improvement, blameless culture, taking ownership, knowledge sharing]
 date: 2022-10-18T14:00:48+01:00
 draft: false
 ---

@@ -1,5 +1,7 @@
 ---
 title: "Hack 3985"
+categories: [profession in context, tooling and technology]
+tags: [agile, multidisciplinary teams, collaboration, SaaS vs Bespoke vs Enterprise]
 date: 2022-11-30T09:57:16+01:00
 draft: false
 ---

@@ -1,5 +1,7 @@
 ---
 title: "hack-hw43"
+categories: [profession in context, peer review]
+tags: [regulatory requirements,how their occupation fits into the wider digital landscape, interfaces with other areas of an organisation, engage in productive pair programming, pair programming techniques]
 date: 2022-11-22T15:55:12Z
 draft: false
 ---

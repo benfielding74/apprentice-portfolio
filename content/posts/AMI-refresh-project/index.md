@@ -1,5 +1,7 @@
 ---
 title: "AMI Refresh Project"
+categories: [profession in context, communicating and knowledge sharing]
+tags: [roles within a multi-disciplinary team, different methods of communication, communicating credibly, show and tell]
 date: 2023-05-28T17:14:42+01:00
 draft: true
 ---

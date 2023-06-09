@@ -21,5 +21,13 @@ theme = "PaperMod"
   url = '/contents/'
   weight = -110
 
+[[menu.main]]
+
+  identifier = 'categories'
+  name = 'categories'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/categories/'
+  weight = -120
+
 [markup.goldmark.renderer]
   unsafe = true

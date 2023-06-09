@@ -1,5 +1,7 @@
 ---
 title: "Hack Hw255"
+categories: [profession in context, communicating and knowledge sharing, data ethics]
+tags: [current or future regulatory requirements, sharing best practice, engaging in peer review practices, learning from others, how to use data ethically, data protection policy and legislation]
 date: 2023-01-05T12:13:26Z
 draft: false
 ---

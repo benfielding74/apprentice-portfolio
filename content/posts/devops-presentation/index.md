@@ -1,5 +1,7 @@
 ---
 title: "Devops Presentation"
+categories: [communicating and knowledge sharing]
+tags: [communicating credibly, presentation, non-technical, working as part of a collaborative community, sharing best practice]
 date: 2022-08-22T15:49:39+01:00
 draft: false
 ---

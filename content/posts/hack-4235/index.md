@@ -1,5 +1,7 @@
 ---
 title: "Hack 4235"
+categories: [problem solving]
+tags: [problem solving techniques, plan-do-check-act]
 date: 2022-10-22T18:12:03+01:00
 draft: false
 ---

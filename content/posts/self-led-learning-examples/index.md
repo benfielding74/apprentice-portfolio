@@ -62,7 +62,7 @@ This was an AWS Tech enablement session hosted by AWS and attended online via Te
 
 ### AWS Certified Cloud Practioner Exam Preparation path
 
-This is a Pluralsight course designed to prepare you for AWS Cloud Certification with a mix of videos, exercise material and labs to give you an overview of the cloud services AWS offers. The labs covered setting up an s3 bucket for static web hosting, configuring an EC2 instance as a web server and setting up users with IAM.
+This is a Pluralsight course designed to prepare you for AWS Cloud Certification with a mix of videos, exercise material and labs to give you an overview of the cloud services AWS offers. The labs covered setting up an s3 bucket for static web hosting, configuring an EC2 instance as a web server and setting up users with IAM.[(*K25*)]({{< ref "/posts/work-mapping-table#K25">}})
 
 ![AWS architecture](aws_sec_and_arc.jpeg)
 

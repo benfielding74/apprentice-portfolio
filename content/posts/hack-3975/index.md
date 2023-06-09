@@ -1,5 +1,7 @@
 ---
 title: "hack-3975"
+categories: [profession in context]
+tags: [roles within a multidisciplinary team, different methods of communication]
 date: 2022-06-30T12:05:16+01:00
 draft: false
 ---
