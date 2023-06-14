@@ -1,7 +1,7 @@
 ---
 title: "AMI Refresh Project"
-categories: [profession in context, communicating and knowledge sharing]
-tags: [roles within a multi-disciplinary team, different methods of communication, communicating credibly, show and tell]
+categories: [profession in context, communicating and knowledge sharing, peer review, problem solving]
+tags: [roles within a multi-disciplinary team, different methods of communication, communicating credibly, show and tell, modelling techniques, architecture]
 date: 2023-05-28T17:14:42+01:00
 draft: true
 ---
@@ -12,7 +12,7 @@ In order to patch vulnerabilities and install software version updates so as to 
 
 ### Task
 
-A project team has been assembled consisting of myself, another apprentice and a fast-stream staff member, supported by two of the senior engineers. Our task is to find a way to automate the process of refreshing the auto scaling groups and testing that they are running. This turned out to be phase one of the task/project as once we had completed this intial step we were asked to also implement automation for the AMI build and the launch template updates. 
+A project team has been assembled consisting of myself, another apprentice and a fast-stream staff member, supported by two of the senior engineers. Our task is to find a way to automate the process of refreshing the auto scaling groups and testing that they are running. This turned out to be phase one of the task/project as once we had completed this initial step we were asked to also implement automation for the AMI build and the launch template updates. 
 
 ### Action
 
@@ -94,6 +94,10 @@ locals {
 
 ```
 
+![Example of tags on resource](ami.png)
+
+*Fig 1: An example of the tags on the Auto Scaling group in AWS console*
+
 We deployed the Lambda to the Sandbox environment and implemented the tagging on one of the project stacks to be able to test. Once this was successfully implemented we held a meeting with the team leads to discuss project progress and demonstrate our solution.[(*S1*)]({{< ref "/posts/work-mapping-table#S1.1">}}) The team lead liked our solution and asked us to expand on it in the next phase of the project by adding a Lambda to update the new AMI version in the ASG launch templates so that we would not need to apply Terraform to do this and also to look into how we could add notifications and tests. 
 
 #### HW-372 Create Notification and alerting system for automated refreshes
@@ -150,7 +154,15 @@ def lambda_handler(event, context):
 
 ```
 
-The other project members had been working on testing that the refreshed ASG's were healthy and implementing Terraform to grant neccesary permissions and to deploy the Lambda's. At this stage we held another project meeting and a show and tell session to talk through our work with other members of the team. THe feedback overall was good but there was some concern about how we were going to orchestrate the four Lambdas we now had deployed and that our initial testing process was not sufficient to determine if applications were running. We decided to carry out some further research and see how we could address the concerns raised.
+*Fig 2: My python Lambda to send slack messages*
+
+The other project members had been working on testing that the refreshed ASG's were healthy and implementing Terraform to grant necessary permissions and to deploy the Lambda's. At this stage we held another project meeting and a show and tell session to talk through our work with other members of the team. The feedback overall was good but concerns were raised about how we were going to orchestrate the four Lambdas we now had deployed and also that our initial testing process was not sufficient to determine if applications were running as it only covered checking if the underlying instance was healthy. We decided to carry out some further research and see how we could address the concerns raised.[(*K23*)]({{< ref "/posts/work-mapping-table#K23.1">}})
+
+For testing I looked at whether we could utilise AWS Synthetic Canaries. Amazon Cloudwatch synthetics create canaries which are configurable scripts that run on a schedule to monitor endpoints and API's. Scripts are written in node.js or Python. The script creates a Lambda function in your account, working over both HTTP and HTTPS protocols. It checks the availability and latency of your endpoints and stores load time data and UI screenshots, monitors REST API's, URLS and web content. It can run once or on a schedule using both cron and rate expressions to schedule. The output of these scripts is stored in an S3 bucket. I presented my findings to the project team and we discussed along with other options. As some of the applications running on the instances do not have endpoints and also as we would have to build in another step to pull the outputs from the S3 bucket and parse them into a format that could be understood by our test infrastructure we decided that it was not the right solution for our project and instead decided to run a check on the individual jobs in Nomad using our existing test Lambda. We also looked at how we could orchestrate our Lambda's and during the meeting diagrammed on a whiteboard what our current solution was doing.
+
+![Meeting whiteboard](whiteboard.jpg?)
+
+*Fig 3: Our meeting whiteboard showing diagrams of how the Lambda's interact and possible solutions to testing*[(*S21*)]({{< ref "/posts/work-mapping-table#S21">}})
 
 
 ### Result

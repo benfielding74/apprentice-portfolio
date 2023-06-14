@@ -72,3 +72,14 @@ This is a Pluralsight course designed to prepare you for AWS Cloud Certification
 
 *Fig 10: AN example of the lab content within this course*
 
+### Understanding and Analysing Emerging CLoud Security Trends
+
+I attended an AWS webinar online via Teams. The hour long sessions was to cover trends in Cloud Infrastructure and Architecture, Identity and Access Management and Cloud threat and vulnerability management.
+
+![The Cloud and Zero Trust](UAECS3.png)
+
+*Fig 11: An example of content covered during the webinar*
+
+![Looking ahead](UAECS4.png)
+
+*Fig 12: A discussion of trends in cloud security and vulnerability management*

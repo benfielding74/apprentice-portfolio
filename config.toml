@@ -9,7 +9,7 @@ theme = "PaperMod"
         appendFilePath = true # to append file path to Edit link
 
 [Params]
-    version = "v2.3.2"
+    version = "v3.0.0"
         
 [menu]
 
