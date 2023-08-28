@@ -22,25 +22,7 @@ To audit the legacy accounts I exported reports from AWS cost management for eac
 
 We were set up with our own Kanban board by the team delivery manager so we could assign tickets to ourselves and work on different aspects of the project simultaneously. Whilst my colleague looked at a process to migrate logs to the new log account,  I started to look at how I would automate the deletion of resources.
 
-I first spent some time looking at the official AWS documentation and performing a Google search to find out if there were any other options available for automatically deleting resources. I quickly came across a software called [AWS Nuke](https://github.com/rebuy-de/aws-nuke) which is a tool that would remove all resources in the accounts including snapshots, EFS, EC2, RDS, and Lambda. After looking at the documentation and reading the reviews, I decided that this would not be an appropriate service to use as our task was to remove select resources from the accounts. I then looked for something more customizable, and came to the conclusion that a bespoke solution using a bash script with AWS CLI would be the most suitable for our requirements. Exploring these differences between Software as a Service(SaaS) with something like AWS Nuke, Enterprise solutions such as AWS tools and creating a bespoke set of tools for my problem I created the following table:[(*K24*)]({{< ref "/posts/work-mapping-table#K24">}})
-
-
-{{<table "table table-striped table-bordered">}}
-|   | Software-as-a-Service (SaaS) | Bespoke | Enterprise Tooling |
-|---|---|---|---|
-| Pros |
-| | Cost-effective | Tailored to specific needs | Offers extensive customization |
-| | Easy to use and deploy | More control over functionality | Offers advanced features and capabilities |
-| | Scalable | Purpose built features and functionality | Integration with other enterprise systems |
-| | Accessible from anywhere with an internet connection | Not tied to a supplier | Strong security and compliance measures |
-| | Automatic updates and upgrades | Easy to change and update | More suitable for large-scale projects |
-| Cons |
-| | Less customization | May not be as secure | Can be complex and difficult to deploy |
-| | May not integrate with other systems | Requires more research and planning | Requires dedicated resources |
-| | Dependence on vendor for support and maintenance | May not meet all business requirements | May have longer development times |
-| | Data security concerns | May not be scalable | May have high licensing costs |
-{{</table>}}
-
+I first spent some time looking at the official AWS documentation and performing a Google search to find out if there were any other options available for automatically deleting resources. I quickly came across a software called [AWS Nuke](https://github.com/rebuy-de/aws-nuke) which is a tool that would remove all resources in the accounts including snapshots, EFS, EC2, RDS, and Lambda. After looking at the documentation and reading the reviews, I decided that this would not be an appropriate service to use as our task was to remove select resources from the accounts. I then looked for something more customizable, and came to the conclusion that a bespoke solution using a bash script with AWS CLI would be the most suitable for our requirements. Exploring these differences between Software as a Service(SaaS) with something like AWS Nuke, Enterprise solutions such as AWS tools and creating a bespoke set of tools for my problem I created a [table]({{< ref "/posts/Saas-vs-Bespoke" >}}).[(*K24*)]({{< ref "/posts/work-mapping-table#K24">}})
 
 ![First iteration of the bash script](bash1.svg)
 *Fig 1: The first iteration of my bash script to delete s3 buckets*
