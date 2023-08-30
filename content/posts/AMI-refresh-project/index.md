@@ -8,7 +8,7 @@ draft: false
 
 ### Situation
 
-In order to patch vulnerabilities and install software version updates so as to decrease the attack surface or servers and ensure they are equipped to support feature team applications, a process is in place within our department that builds a new Amazon Machine Image.  This is then updated within the application and infrastructure stacks by applying Terraform before finally Auto Scaling Group refreshes are manually carried out to apply the new launch templates. This manual process is carried out on a bi-weekly basis. The ASG refresh for production environment has to be carried out as an Out-of-hours task.
+In order to patch vulnerabilities and install software version updates so as to decrease the attack surface of servers ensuring they are equipped to support feature team applications, a process is in place within our department that builds a new Amazon Machine Image.  This is then updated within the application and infrastructure stacks by applying Terraform before finally Auto Scaling Group refreshes are manually carried out to apply the new launch templates. This manual process is carried out on a bi-weekly basis. The ASG refresh for production environment has to be carried out as an Out-of-hours task.
 
 ### Task
 

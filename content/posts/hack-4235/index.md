@@ -12,7 +12,7 @@ Configuration of Jenkins controller and agents is done by means of a Jenkins mod
 
 #### Task
 
-In order to standardize the configuration, utilize consul templates to configure application within the `terraform-aws-jenkins` module.
+In order to standardize the configuration, consul templates should be used to configure the application within the `terraform-aws-jenkins` module.
 
 #### Action
 
@@ -27,7 +27,7 @@ I decided to use the Plan-Do-Check-Act problem solving technique in my workflow 
 >  what is the best solution for fixing the problem?
 >  definition of done/what are the goals/what does success look like?
 >
->  DO - apply everything that has been considered during the previous stage -incorporate on a small scale in a controlled environment
+>  Do - apply everything that has been considered during the previous stage -incorporate on a small scale in a controlled environment
 >
 >  Check - audit the plans execution see if it worked and monitor, analyze faults and problems
 >
@@ -35,7 +35,7 @@ I decided to use the Plan-Do-Check-Act problem solving technique in my workflow 
 
 I first had to do some research to understand how the current configuration works, how the files were structured, and decide how I would implement any possible solution. 
 
-In applying my plan (the Do stage) I updated the maven settings to be .ctmpl files instead of .xml files. I changed the references to credentials within the .xml files to reference instead a vault path and I updated the cloudinit_base.tmpl so that referenced the new file. I then added a new path in the Vault UI to hold the credentials. I then added a gradle.properties file holding the configuration for that.
+In applying my plan (the Do stage) I updated the maven settings to be .ctmpl files instead of .xml files. I changed the references to credentials within the .xml files to reference instead a vault path and I updated the cloudinit_base.tmpl so that it referenced the new file. I then added a new path in the Vault UI to hold the credentials. I then added a gradle.properties file holding the configuration for that path.
 
 ```xml
 
@@ -51,5 +51,5 @@ I had to run my changes in a worker node within a test environment that we have 
 
 #### Result
 
-MR approved and merged and my changes rolled out to all environments. Ticket was beneficial to me as it started to give me an understanding of how Jenkins works and how we can utilize Vault to protect credentials within pipelines. Ticket benefitted the team and other feature teams using Jenkins as it enhanced security and the use of consul templates made the configuration easier to understand and amend.
+My MR was approved and merged and my changes rolled out to all environments. The ticket was beneficial to me as it started to give me an understanding of how Jenkins works and how we can utilize Vault to protect credentials within pipelines. This piece of work benefitted my team, and other feature teams using Jenkins, as it enhanced security and the use of consul templates made the configuration easier to understand and amend.
 
